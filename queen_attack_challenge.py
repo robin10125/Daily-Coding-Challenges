@@ -6,12 +6,19 @@ import random
 import re
 import sys
 
+
+
 # Complete the queensAttack function below.
 def queensAttack(n, k, r_q, c_q, obstacles):
-#8 vectors with r_q as origin, either end of board or obstacle ends the vector.  Eg, 
+    
+    #the nature of this problem is to find the number of spaces a queen on a chessboard can land given n^2 number of squares are k number of obstacles
+    #The solution I have here could be made more efficient by leveraging linear algebra and matrices of the objects and squares.  
+    #One could take 4 vectors, all passing through the point the queen is on, that represents all potential paths of movement, and define their starts and ends to be the borders of the board or obstacles that block the path
+    #Then use the length of the vectors to find the number of open spaces on the board that the queen can move along.
+    #This present solution simply walks along 8 vectors originating at the queens location, stopping as soon as it comes across an object or border of the board.
+    #8 vectors with r_q as origin, either end of board or obstacle ends the vector.  Eg, 
     #r_q -> edge of board left
     
-    helperCoordinates = [0,0]
     potentialPosition = [r_q, c_q]
     up,upL,upR,left,right,downL,downR,down = True,True,True,True,True,True,True,True
     numAttacks = int(0)
