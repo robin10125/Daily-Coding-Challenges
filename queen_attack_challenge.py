@@ -27,9 +27,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
             #reset potentialPosition
        
         else: 
-            numAttacks += 1 
-            print(numAttacks)
-    print("End of direction up")
+            numAttacks += 1           
 
     while upL == True:
         potentialPosition[0] += -1
@@ -41,9 +39,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
             potentialPosition = [r_q,c_q]
         
         else: 
-            numAttacks += 1
-            print(numAttacks)
-    print("End of direction upL")
+            numAttacks += 1        
 
     while upR == True:
         
@@ -57,8 +53,6 @@ def queensAttack(n, k, r_q, c_q, obstacles):
             
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction upR")
 
     while left == True:
         
@@ -71,8 +65,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
            
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction left")
+   
 
     while right == True:
         potentialPosition[0] += 1
@@ -84,8 +77,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
           
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction right")
+          
 
     while downL == True:
         potentialPosition[0] += -1
@@ -98,8 +90,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
                
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction downL")
+          
       
     while downR == True:
 
@@ -113,8 +104,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
               
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction downR")
+    
     
     while down == True:
         potentialPosition[1] += -1
@@ -126,8 +116,7 @@ def queensAttack(n, k, r_q, c_q, obstacles):
                
         else: 
             numAttacks += 1
-            print(numAttacks)
-    print("End of direction down")
+           
     return numAttacks
 
 if __name__ == '__main__':
