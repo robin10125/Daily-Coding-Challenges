@@ -9,7 +9,7 @@ import sys
 # Complete the queensAttack function below.
 def queensAttack(n, k, r_q, c_q, obstacles):
 #8 vectors with r_q as origin, either end of board or obstacle ends the vector.  Eg, 
-    #r_q -> edge of board left.  
+    #r_q -> edge of board left
     
     helperCoordinates = [0,0]
     potentialPosition = [r_q, c_q]
